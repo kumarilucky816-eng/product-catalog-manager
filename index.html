@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Catalog Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUTH SECTION -->
+  <section id="auth-section" class="auth-wrap">
+    <div class="card auth-card">
+      <h1>📦 Catalog Manager</h1>
+      <p class="muted">Login or sign up to manage your catalog</p>
+
+      <div class="tabs">
+        <button id="tab-login" class="tab active" type="button">Login</button>
+        <button id="tab-signup" class="tab" type="button">Signup</button>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <div id="name-field" class="field hidden">
+          <label for="auth-name">Name</label>
+          <input id="auth-name" type="text" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="auth-email">Email</label>
+          <input id="auth-email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="auth-password">Password</label>
+          <input id="auth-password" type="password" placeholder="At least 6 characters" required />
+        </div>
+        <p id="auth-error" class="error" role="alert"></p>
+        <button id="auth-submit" class="btn primary full" type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- APP SECTION -->
+  <section id="app-section" class="hidden">
+    <header class="topbar">
+      <h2>📦 Catalog Manager</h2>
+      <div class="user-box">
+        <span id="user-name" class="muted"></span>
+        <button id="logout-btn" class="btn ghost" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="stats">
+        <div class="card stat"><span id="stat-total">0</span><small>Total items</small></div>
+        <div class="card stat"><span id="stat-value">₹0</span><small>Total value</small></div>
+        <div class="card stat"><span id="stat-low">0</span><small>Low stock (&lt;5)</small></div>
+      </div>
+
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="🔍 Search by name..." />
+        <select id="filter-category"></select>
+        <select id="sort">
+          <option value="new">Newest first</option>
+          <option value="name">Name (A-Z)</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+        </select>
+        <button id="add-btn" class="btn primary" type="button">+ Add Item</button>
+      </div>
+
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty hidden">No items found. Click "+ Add Item"to add one.</p>
+    </main>
+  </section>
+
+  <!-- ADD / EDIT MODAL -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="card modal-card">
+      <h3 id="modal-title">Add Item</h3>
+      <form id="item-form" novalidate>
+        <input type="hidden" id="item-id" />
+        <div class="field">
+          <label for="item-name">Name</label>
+          <input id="item-name" type="text" required />
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="item-category">Category</label>
+            <select id="item-category">
+              <option>Electronics</option>
+              <option>Books</option>
+              <option>Clothing</option>
+              <option>Grocery</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="item-price">Price (₹)</label>
+            <input id="item-price" type="number" min="0" step="1" required />
+          </div>
+          <div class="field">
+            <label for="item-stock">Stock</label>
+            <input id="item-stock" type="number" min="0" step="1" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="item-desc">Description</label>
+          <textarea id="item-desc" rows="3"></textarea>
+        </div>
+        <p id="item-error" class="error" role="alert"></p>
+        <div class="actions">
+          <button id="cancel-btn" class="btn ghost" type="button">Cancel</button>
+          <button class="btn primary" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
