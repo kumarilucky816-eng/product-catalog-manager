@@ -1,4 +1,4 @@
-\# Product Catalog Manager
+# Product Catalog Manager
 
 
 
@@ -6,35 +6,35 @@ A responsive web app to manage a product catalog, built with HTML, CSS and vanil
 
 
 
-Live Demo: ADD-YOUR-LIVE-URL-HERE
+Live Demo: https://product-catalog-manager-three.vercel.app
 
-GitHub Repository: ADD-YOUR-GITHUB-URL-HERE
-
-
-
-\## Features
+GitHub Repository: https://github.com/kumarilucky816-eng/product-catalog-manager
 
 
 
-\- Authentication simulation: Signup, Login and Logout with validation
-
-\- Session stays active after page refresh
-
-\- Separate catalog for every user account
-
-\- Interactive catalog: live search, category filter and sorting
-
-\- Dynamic CRUD: add, edit and delete items using a form
-
-\- Persistent state: all data is saved in localStorage
-
-\- Dashboard stats: total items, total inventory value, low-stock count
-
-\- Responsive design for mobile and desktop
+## Features
 
 
 
-\## Architecture
+- Authentication simulation: Signup, Login and Logout with validation
+
+- Session stays active after page refresh
+
+- Separate catalog for every user account
+
+- Interactive catalog: live search, category filter and sorting
+
+- Dynamic CRUD: add, edit and delete items using a form
+
+- Persistent state: all data is saved in localStorage
+
+- Dashboard stats: total items, total inventory value, low-stock count
+
+- Responsive design for mobile and desktop
+
+
+
+## Architecture
 
 
 
@@ -70,29 +70,29 @@ GitHub Repository: ADD-YOUR-GITHUB-URL-HERE
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
-\- index.html : page structure (login form, catalog, add/edit form)
+- index.html : page structure (login form, catalog, add/edit form)
 
-\- style.css  : styling and responsive layout
+- style.css  : styling and responsive layout
 
-\- app.js     : authentication, CRUD, search/filter/sort, saving data
+- app.js     : authentication, CRUD, search/filter/sort, saving data
 
-\- README.md  : project documentation
-
-
-
-\## Setup Instructions
+- README.md  : project documentation
 
 
 
-1\. Download or clone this repository.
+## Setup Instructions
 
-2\. Open index.html in any modern browser.
 
-3\. Click Signup, create an account and start adding items.
+
+1. Download or clone this repository.
+
+2. Open index.html in any modern browser.
+
+3. Click Signup, create an account and start adding items.
 
 
 
@@ -100,7 +100,7 @@ No installation or build step is required.
 
 
 
-\## Deployment
+## Deployment
 
 
 
@@ -108,7 +108,7 @@ The project is deployed as a static site on Vercel / Netlify / Cloudflare Pages 
 
 
 
-\## Note
+## Note
 
 
 
@@ -116,7 +116,7 @@ The authentication is only a simulation for learning. Passwords are stored in th
 
 
 
-\## Tech Stack
+## Tech Stack
 
 
 
@@ -124,7 +124,7 @@ HTML5, CSS3, JavaScript (ES6), localStorage, Git and GitHub
 
 
 
-\## Author
+## Author
 
 
 
